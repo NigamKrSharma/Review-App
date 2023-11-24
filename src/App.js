@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ReviewForm from "./Components/ReviewForm";
+import ReviewsList from "./Components/ReviewList";
 
-function App() {
+const App = () => {
+  const [reviews, setReviews] = useState([]);
+
+  const handleReviewSubmit = (newReview) => {
+    setReviews([...reviews, newReview]);
+  };
+
+  const handleDeleteReview = (index) => {
+    const updatedReviews = [...reviews];
+    updatedReviews.splice(index, 1);
+    setReviews(updatedReviews);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Review Application</h1>
+      <ReviewForm onReviewSubmit={handleReviewSubmit} />
+      <ReviewsList reviews={reviews} onDeleteReview={handleDeleteReview} />
     </div>
   );
-}
+};
 
 export default App;

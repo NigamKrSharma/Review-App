@@ -1,13 +1,132 @@
-body {
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.app {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 50px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.app h1{
+  text-align: center;
+  letter-spacing:2px ;
+  margin-bottom: 35px;
+}
+
+
+.form-container h2{
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+ 
+.title input{
+  width: 260px;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+.rating input{
+   width: 260px;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+label {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  background-color: #313234;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #111314;
+}
+
+textarea{
+  width: 100%;
+  height: 160px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+.form-btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.review-container{
+  margin-top: 20px;
+}
+
+.review-container h2{
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+.review-container p{
+  margin-top: 10px;
+  text-align: center;
+}
+ul {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+
+li {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+li button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+li button:hover {
+  background-color: #bd2130;
 }
